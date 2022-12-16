@@ -1,0 +1,36 @@
+pipeline{
+    agent any
+    stages{
+        stage('Prompt for input'){
+            steps{
+                script{
+                    env.IMAGE = input(
+                        messgae: 'enter the image name',
+                        ok: 'Submit',
+                        parameters: [string(defaultValue: 'nginx', name: 'image name')]
+                    )
+                }
+            }
+        }
+
+ 
+
+        stage('docker compose up'){
+            steps{
+                sh """
+                cd
+                pwd
+                IMAGE=${env.IMAGE} docker-compose up -d
+                """
+            }
+        }
+        stage('docker-ps'){
+            steps{
+                sh """
+                docker ps -a
+                """
+            }
+        }
+    }
+}
+
