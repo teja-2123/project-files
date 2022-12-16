@@ -1,0 +1,33 @@
+Started by user saiteja
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/jenkins-input-while-build
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Prompt for input)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] input
+Input requested
+Approved by saiteja
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] echo
+Image: nginx
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (docker compose up)
+[Pipeline] sh
++ cd
++ pwd
+/var/lib/jenkins
++ sudo IMAGE=nginx docker-compose up -d
+Creating network "jenkins_default" with the default driver
+Creating jenkins_web_1 ... 
+Creating jenkins_web_1 ... done
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
