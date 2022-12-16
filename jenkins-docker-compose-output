@@ -28,6 +28,15 @@ Creating jenkins_web_1 ...
 Creating jenkins_web_1 ... done
 [Pipeline] }
 [Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (docker-ps)
+[Pipeline] sh
++ sudo docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS        PORTS                                   NAMES
+eb69caba69da   nginx     "/docker-entrypoint.…"   6 seconds ago   Up 1 second   0.0.0.0:5000->80/tcp, :::5000->80/tcp   jenkins_web_1
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
 [Pipeline] // node
 [Pipeline] End of Pipeline
 Finished: SUCCESS
