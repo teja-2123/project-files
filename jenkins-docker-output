@@ -1,0 +1,10 @@
+Started by user saiteja
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Docker-installation-1
+SSH: Connecting from host [ip-10-0-1-84]
+SSH: Connecting with configuration [Docker] ...
+SSH: EXEC: completed after 26,444 ms
+SSH: Disconnecting configuration [Docker] ...
+SSH: Transferred 0 file(s)
+Build step 'Send files or execute commands over SSH' changed build result to SUCCESS
+Finished: SUCCESS
